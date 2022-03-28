@@ -142,7 +142,9 @@ void bubble_sort_descending(int* array, unsigned int size) {
     {
         //#######################################################
         //Implement here
-        ;
+        for (int j = 0; j < size - i - 1; j++)
+			if(array[j] < array[j+1])
+				swap(array[j], array[j+1]);
         //#######################################################
     }
 }
@@ -152,7 +154,15 @@ void insertion_sort_descending(int* array, unsigned int size) {
 	{
 		//#######################################################
         //Implement here
-        ;
+        int temp = array[i];
+		int j = i - 1;
+		while(1){
+			if(j < 0) break;
+			if(array[j] >= temp) break;
+			else array[j+1] = array[j];
+			j--;
+		}
+		array[j + 1] = temp;
         //#######################################################
 	}
 }
@@ -162,7 +172,15 @@ void selection_sort_descending(int* array, unsigned int size) {
 	{
 		//#######################################################
         //Implement here
-        ;
+        	int max = array[i];
+		int max_idx = i;
+		for (int j = i + 1; j < size; j++) {
+			if(array[j] > max){
+                max = array[j];
+				max_idx = j;
+			}
+		}
+		swap(array[i], array[max_idx]);
         //#######################################################
 	}
 }
