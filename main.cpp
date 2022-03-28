@@ -166,7 +166,7 @@ void selection_sort_descending(int* array, unsigned int size) {
 	for (unsigned int i = 0; i < size - 1; i++)
 	{
 		int max_idx = i;
-		int max = arrya[i];
+		int max = array[i];
 		for(unsigned int j = i+1;j<size;j++)
 		{
 			if(max<array[j])
