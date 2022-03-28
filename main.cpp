@@ -142,17 +142,40 @@ void bubble_sort_descending(int* array, unsigned int size) {
     {
         //#######################################################
         //Implement here
-        ;
+        
+        for (unsigned int j = 0; j < size - 1 - i; j++)
+		{
+			if (array[j] < array[j + 1]) 
+			{
+                int temp = array[j];//array[j]와 array[j+1]을 바꿈
+                array[j] = array[j+1];
+                array[j+1] = temp;
+	
+
+			}
         //#######################################################
+        }
     }
 }
-
 void insertion_sort_descending(int* array, unsigned int size) {
 	for (unsigned int i = 1; i < size; i++)
 	{
 		//#######################################################
         //Implement here
-        ;
+        int temp = array[i];
+		int j = i - 1;
+		while(j>=0)
+		{
+            if (temp > array[j]){ //array[i]가 array[j]보다 크다면 자리바꿈
+                array[i] = array[j];
+                j--;
+                i--;
+            }
+            else{
+                break;
+            }
+		}
+		array[j + 1] = temp;
         //#######################################################
 	}
 }
@@ -162,10 +185,18 @@ void selection_sort_descending(int* array, unsigned int size) {
 	{
 		//#######################################################
         //Implement here
-        ;
+        int max = array[i];
+		int max_idx = i;
+		for (unsigned int j = i + 1; j < size; j++)
+		{
+            if (array[j] > max){ //최댓값 구하는 과정
+                max = array[j];
+                max_idx = j;
+            }
+		}
+		swap(array[i], array[max_idx]); //최댓값을 왼쪽 정렬
         //#######################################################
 	}
 }
-
 
 
