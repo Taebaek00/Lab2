@@ -155,7 +155,7 @@ void insertion_sort_descending(int* array, unsigned int size) {
 	{
 		//#######################################################
         //Implement here
-        int temp = array[i];
+                int temp = array[i];
 		int j = i - 1;
 		while(1)
 		{
@@ -175,7 +175,7 @@ void selection_sort_descending(int* array, unsigned int size) {
 	{
 		//#######################################################
         //Implement here
-        int min = array[i];
+                int min = array[i];
 		int min_idx = i;
 		for (unsigned int j = i + 1; j < size; j++)
 		{
