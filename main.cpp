@@ -184,7 +184,7 @@ void selection_sort_descending(int* array, unsigned int size) {
 				max_val = array[j];
 			}
 		}
-		swap(array[i], array[max+index]);
+		swap(array[i], array[max_index]);
         //######################################################
 	}
 }
